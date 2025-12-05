@@ -31,23 +31,24 @@ A collection of robotic process automation (RPA) workflows built with **Microsof
 
 ## 🛠️ Technical Implementation & Workflow
 
-### Development Philosophy
-This repository demonstrates a **"Hybrid Engineering"** approach. My focus is on designing robust algorithms and business logic, while utilizing modern AI tools to accelerate syntax generation and optimization.
+---
+## ⚙️ Engineering Philosophy & AI-Augmented Workflow
 
-* **Architectural Design (Human-Led):**
-    * Defined the **O(N)** strategy for the logistics synchronization to solve the runtime freeze.
-    * Created the **"Line 0 Protection"** business rule to ensure data integrity during updates.
-    * Designed the **Matrix Logic** for the RPA bot to ensure non-technical users could update rules without touching code.
+This repository demonstrates a **Modern "Hybrid" Development Strategy**. 
+In an era where syntax is cheap but logic is expensive, my focus is on **Architectural Design** and **Business Value**. I utilize Large Language Models (LLMs) as a "force multiplier" to accelerate development across my tech stack.
 
-* **AI-Assisted Optimization (Tool-Assisted):**
-    * Leveraged LLMs to refactor legacy nested loops into **Scripting.Dictionary** (Hash Maps) for performance.
-    * Generated boilerplate error-handling blocks (`On Error GoTo`) to ensure production stability.
-    * Used AI for rapid syntax translation between Excel Formulas and VBA Logic.
+### 🧠 The Division of Labor
+* **Human Architect (Me):**
+    * **Business Logic:** Defining the complex rules (e.g., FIFO Valuation, Line 0 Protection, File Routing Matrix).
+    * **System Architecture:** Designing how disparate systems (Excel, Outlook, File System) interact securely.
+    * **Validation:** Reviewing, debugging, and stress-testing all code for accuracy and edge cases.
+* **AI Assistant (Tooling):**
+    * **Syntax Generation:** Rapidly translating logic into specific syntax for **VBA**, **M Code (Power Query)**, and **DAX**.
+    * **Pattern Optimization:** Refactoring nested loops into $O(N)$ Hash Maps (`Scripting.Dictionary`) for performance.
+    * **Boilerplate:** Generating standard error-handling blocks and UI elements.
 
-### Key Technical Concepts Demonstrated
-| Concept | Application in this Repo |
-| :--- | :--- |
-| **Big O Optimization** | Reduced execution time from exponential ($O(N^2)$) to linear ($O(N)$) using Dictionaries. |
-| **ETL Processes** | Automated the Extraction, Transformation, and Loading of data between unstructured reports and master tables. |
-| **Defensive Coding** | Implemented `Option Explicit`, type checking, and object validation to prevent runtime crashes. |
-| **Low-Code Integration** | Bridged the gap between Excel (VBA) and the OS (Power Automate) to handle file system operations. |
+### 🛠️ Tech Stack & Methodology
+This workflow allows me to maintain high standards of code quality across multiple domains:
+* **VBA:** used for Event-Driven Automation and Object Model manipulation.
+* **Power Automate (RPA):** used for OS-level orchestration and "Low-Code" integration.
+* **Power Query (M Code):** used for robust ETL data transformation and cleaning steps.
