@@ -7,7 +7,7 @@ A collection of robotic process automation (RPA) workflows built with **Microsof
 
 ## 📂 Featured Workflows
 
-### 1. Smart File Router (Matrix Logic)
+### 1. Smart File Router (Matrix Logic) [with the help of AI]
 **File:** [SmartFileRouter.txt](./SmartFileRouter.txt)
 
 > **The Challenge:**
