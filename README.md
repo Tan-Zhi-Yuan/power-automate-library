@@ -24,11 +24,6 @@ A collection of robotic process automation (RPA) workflows built with **Microsof
 
 ---
 
-## 🛠️ Tech Stack
-* **Tool:** Microsoft Power Automate Desktop (PAD)
-* **Integrations:** Excel, File System, Outlook
-* **Concepts:** Loops, Conditionals, Error Handling, UI Automation
-
 ## 🛠️ Technical Implementation & Workflow
 
 ---
