@@ -7,9 +7,12 @@ A collection of robotic process automation (RPA) workflows and Cloud Scripts bui
 
 ## 📂 Featured Workflows
 
-### 1. Smart File Router (Desktop RPA)
-**File:** [SmartFileRouter.txt](./SmartFileRouter.txt)
+<details>
+<summary><b>1. Smart File Router (Desktop RPA) (Click to Expand)</b></summary>
+<br>
 
+> **File:** [SmartFileRouter.txt](./SmartFileRouter.txt)
+>
 > **The Challenge:**
 > The procurement team receives unorganized PDFs (Invoices, POs) that need to be filed into specific directories based on Supplier Name and Document Type. Manual sorting was slow and error-prone.
 >
@@ -17,13 +20,18 @@ A collection of robotic process automation (RPA) workflows and Cloud Scripts bui
 > * **Matrix-Based Rules:** The bot reads an external Excel file (`Rules.xlsx`) to determine where files should go. This allows users to update sorting rules without modifying the bot's code.
 > * **Multi-Criteria Matching:** Checks that the filename contains the *Supplier Name* AND starts with the correct *Prefix* before moving.
 > * **Audit Logging:** Generates a text report of every file moved during the session.
+>
+> **Logic Visualization:**
+> ![Flow Diagram](./flow-diagram.png)
 
-**Logic Visualization:**
-![Flow Diagram](./flow-diagram.png)
+</details>
 
-### 2. Auto-Refresh & KPI Snapshot (Cloud Script)
-**File:** [Refresh_and_Snapshot_KPIs.ts](./Refresh_and_Snapshot_KPIs.ts)
+<details>
+<summary><b>2. Auto-Refresh & KPI Snapshot (Cloud Script) (Click to Expand)</b></summary>
+<br>
 
+> **File:** [Refresh_and_Snapshot_KPIs.ts](./Refresh_and_Snapshot_KPIs.ts)
+>
 > **The Challenge:**
 > Management required a "frozen" snapshot of daily KPIs immediately after the data refresh. Doing this manually led to timing errors (copying data before the refresh finished) or formatting inconsistencies.
 >
@@ -31,6 +39,8 @@ A collection of robotic process automation (RPA) workflows and Cloud Scripts bui
 > * **Async Orchestration:** Utilized TypeScript's `async/await` pattern to ensure `workbook.refreshAllDataConnections()` completes before any data manipulation occurs.
 > * **Automated History:** Inserts a new column to "push" old data to the right, creating an infinite rolling history of daily snapshots without manual intervention.
 > * **Cloud Compatible:** Unlike VBA, this script runs in Excel Online and can be triggered via Power Automate Cloud Flows.
+
+</details>
 
 ---
 
