@@ -1,13 +1,13 @@
-# 🤖 RPA Automation Library
+# 🤖 RPA & Cloud Automation Library
 
 ## Overview
-A collection of robotic process automation (RPA) workflows built with **Microsoft Power Automate Desktop**. These "digital workers" handle repetitive file management and data entry tasks.
+A collection of robotic process automation (RPA) workflows and Cloud Scripts built with **Microsoft Power Automate** and **TypeScript (Office Scripts)**. These "digital workers" handle repetitive file management, data entry, and report generation tasks.
 
 ---
 
 ## 📂 Featured Workflows
 
-### 1. Smart File Router (Matrix Logic) 
+### 1. Smart File Router (Desktop RPA)
 **File:** [SmartFileRouter.txt](./SmartFileRouter.txt)
 
 > **The Challenge:**
@@ -20,16 +20,30 @@ A collection of robotic process automation (RPA) workflows built with **Microsof
 
 **Logic Visualization:**
 ![Flow Diagram](./flow-diagram.png)
-*(Make sure you uploaded an image named flow-diagram.png for this to show)*
+
+### 2. Auto-Refresh & KPI Snapshot (Cloud Script)
+**File:** [Refresh_and_Snapshot_KPIs.ts](./Refresh_and_Snapshot_KPIs.ts)
+
+> **The Challenge:**
+> Management required a "frozen" snapshot of daily KPIs immediately after the data refresh. Doing this manually led to timing errors (copying data before the refresh finished) or formatting inconsistencies.
+>
+> **The Solution:**
+> * **Async Orchestration:** Utilized TypeScript's `async/await` pattern to ensure `workbook.refreshAllDataConnections()` completes before any data manipulation occurs.
+> * **Automated History:** Inserts a new column to "push" old data to the right, creating an infinite rolling history of daily snapshots without manual intervention.
+> * **Cloud Compatible:** Unlike VBA, this script runs in Excel Online and can be triggered via Power Automate Cloud Flows.
 
 ---
 
 ## 🛠️ Technical Implementation & Workflow
 
+* **Power Automate Desktop (PAD):** Used for tasks requiring access to the local file system (e.g., moving PDFs, interacting with legacy desktop apps).
+* **Office Scripts (TypeScript):** Used for Excel-specific logic that needs to run in the cloud (SharePoint/OneDrive) without a user logged in.
+* **Separation of Concerns:** Hard-coded logic is avoided. Scripts rely on external "Config Tables" (Excel) so business users can update rules (e.g., new folder paths or supplier names) without touching the code.
+
 ---
 ## ⚙️ Engineering Philosophy & AI-Augmented Workflow
 
-This repository demonstrates a **Modern "Hybrid" Development Strategy**. 
+This repository demonstrates a **Modern "Hybrid" Development Strategy**.
 In an era where syntax is cheap but logic is expensive, my focus is on **Architectural Design** and **Business Value**. I utilize Large Language Models (LLMs) as a "force multiplier" to accelerate development across my tech stack.
 
 ### 🧠 The Division of Labor
@@ -46,4 +60,5 @@ In an era where syntax is cheap but logic is expensive, my focus is on **Archite
 This workflow allows me to maintain high standards of code quality across multiple domains:
 * **VBA:** used for Event-Driven Automation and Object Model manipulation.
 * **Power Automate (RPA):** used for OS-level orchestration and "Low-Code" integration.
+* **TypeScript (Office Scripts):** used for cloud-native Excel automation and API-level data handling.
 * **Power Query (M Code):** used for robust ETL data transformation and cleaning steps.
